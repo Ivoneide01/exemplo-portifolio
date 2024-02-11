@@ -195,11 +195,11 @@ h4{
 
 }
 .event-image{
-    width:400px;
-    height: 500px;
+    width:200px;
+    height: 250px;
 }
 .event-image img{
-    width: 100%;
+    width: 150%;
     height: 100%;
     object-fit: contain;
 }
