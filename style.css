@@ -134,8 +134,8 @@ justify-content: space-evenly;
 flex-wrap: wrap;
 }
 .game-image{
-    width:300px;
-    height: 180px;
+    width:50px;
+    height: 50px;
     
 }
 .game-image img{
@@ -144,6 +144,22 @@ flex-wrap: wrap;
     object-fit: cover;
 }
 .game-store-list{
+    width:50px;
+    height: 50px;
+     margin: 20px;
+    overflow: hidden;
+    border-top: none;
+    
+      -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+              box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-bottom: 1px solid blueviolet;
+    color:white;
+     
+}
+
+.Certificado-list{
     width:300px;
     height: 300px;
      margin: 20px;
@@ -157,7 +173,10 @@ flex-wrap: wrap;
     border-bottom: 1px solid blueviolet;
     color:white;
      
+
 }
+
+
 .store-text-description{
      
 padding-left:20px;
