@@ -159,34 +159,18 @@ flex-wrap: wrap;
      
 }
 
-.Certificado-list{
-    width:300px;
-    height: 300px;
-     margin: 20px;
-    overflow: hidden;
-    border-top: none;
-    
-      -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-              box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-bottom: 1px solid blueviolet;
-    color:white;
-     
-
-}
-
-
 .store-text-description{
      
 padding-left:20px;
 display: flex;
 flex-direction: column;
+margin-left: 10px; /* Espaço entre a imagem e o texto */
      
 } 
 h4{
     color:white;
     font-weight: 700;
+    font-size: 14px;
 }
 .event-hero{
     display: flex;
@@ -241,8 +225,7 @@ h5{
 }
 span{
     padding-right: 10px;
-}
-.contact-list p{
+    font-size: 12px;
 }
 .email-contact{
     width:80%;
@@ -251,11 +234,6 @@ span{
     flex-direction: column;
     justify-content: space-evenly;
 }
-
-
-
-
-
 
 /*General CSS and CSS reset*/
 
