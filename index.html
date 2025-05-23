@@ -240,5 +240,45 @@
       }
     }
     </script>
+    <!-- HTML -->
+<form id="formulario">
+  <input type="text" id="nome" placeholder="Nome" required />
+  <input type="email" id="email" placeholder="Email" required />
+  <button type="submit">Enviar</button>
+</form>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBmqnjiAHb-pjqsspZ6kcBjcK9Lks0iHqU",
+    authDomain: "portifolionid.firebaseapp.com",
+    databaseURL: "https://portifolionid-default-rtdb.firebaseio.com",
+    projectId: "portifolionid",
+    storageBucket: "portifolionid.appspot.com",
+    messagingSenderId: "438566113511",
+    appId: "1:438566113511:web:efaf522682c2d6d8051242"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const analytics = getAnalytics(app);
+
+  // Enviar apenas quando o formulário for enviado
+  document.getElementById("formulario").addEventListener("submit", function (e) {
+    e.preventDefault(); // Impede envio padrão do form
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+
+    const contatosRef = ref(db, "contatos");
+    push(contatosRef, { nome, email })
+      .then(() => alert("Enviado com sucesso!"))
+      .catch((err) => console.error("Erro ao enviar:", err));
+  });
+</script>
+
 </body>
 </html>
