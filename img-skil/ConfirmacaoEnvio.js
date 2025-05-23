@@ -1,21 +1,20 @@
-// Adicionar evento de envio ao formulário
 const formContato = document.getElementById('formularioContato');
 const confirmationMessage = document.getElementById('confirmationMessage');
 
 formContato.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const nome = formContato['name'].value;
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
 
-    // Enviar os dados para o Firebase Realtime Database
-    enviarDadosFormulario(nome)
+    // Aqui você pode enviar `nome` e `email` para o Firebase
+    enviarDadosFormulario(nome, email)
         .then(() => {
             console.log('Dados do formulário de contato enviados com sucesso!');
-            confirmationMessage.style.display = "block"; // Exibir mensagem de confirmação
-            formContato.reset(); // Limpar o formulário após o envio
+            confirmationMessage.style.display = "block";
+            formContato.reset();
         })
         .catch((error) => {
             console.error('Erro ao enviar dados do formulário de contato:', error);
         });
 });
-
